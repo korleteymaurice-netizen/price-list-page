@@ -85,14 +85,11 @@
         padding: 18px 0;
         border-bottom: 1px solid #e5e7eb;
         }
-        /* RESPONSIVE */
+        
 
 .main-div {
     display: flex;
     overflow-x: auto;
-    width: 100%;
-    scrollbar-width: none;
-    overflow: hidden;
 }
 
 .main-div::-webkit-scrollbar {
@@ -101,7 +98,6 @@
 
 .div1 {
     min-width: 220px;
-    flex-shrink: 0;
 }
 
     @media (max-width: 768px) {
@@ -109,7 +105,7 @@
  
 
     .div1 {
-        min-width: 150px;
+        min-width: 220px;
     }
 
     .price {
@@ -154,21 +150,36 @@
         border-radius: 10px;
         text-align: center;
     }
+    @media (max-width: 768px) {
 
-       
-         
-        
-       
-        
-   
-       
+    .main-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .div1 {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .price {
+        font-size: 42px;
+    }
+
+}
+* {
+    box-sizing: border-box;
+}
+
 
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Pricing & Plans</h1>
-        <p>Discover the plan that unlocks the transformative power <br> of digital art and join our community today.</p>
+        <p>Discover the plan that unlocks the transformative power of digital art and join our community today.</p>
     </div>
     <div class="main-div">
         <div class="div1">
